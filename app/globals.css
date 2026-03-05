@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Custom scrollbar for sidebar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* React Flow overrides for dark theme */
+.react-flow__controls button {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+  fill: #94a3b8 !important;
+}
+.react-flow__controls button:hover {
+  background-color: #1e293b !important;
+  fill: #e2e8f0 !important;
+}
+.react-flow__minimap {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 12px !important;
+}
