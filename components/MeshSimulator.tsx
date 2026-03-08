@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import React, { useCallback, useState, useEffect, useMemo, useRef } from 'react';
 import {
   ReactFlow,
@@ -20,7 +22,7 @@ import { CustomNode, NodeData } from './CustomNode';
 import {
   Play, AlertOctagon, Activity, RotateCcw, ShieldCheck, Zap,
   ChevronLeft, ChevronRight, Network, Gauge, Signal,
-  BarChart3, TrendingUp, Clock, WifiOff
+  BarChart3, TrendingUp, Clock, WifiOff, Layers
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -882,6 +884,15 @@ export default function MeshSimulator() {
                         Reset Network
                       </button>
                     </div>
+
+                    {/* Visualizations Link */}
+                    <Link
+                      href="/visualizations"
+                      className="group flex w-full items-center justify-center gap-2 rounded-xl border border-indigo-500/30 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 px-4 py-3 text-sm font-semibold text-indigo-400 transition-all hover:from-indigo-500/20 hover:to-purple-500/20 hover:border-indigo-500/50"
+                    >
+                      <Layers className="h-4 w-4 transition-transform group-hover:scale-110" />
+                      View All Visualizations
+                    </Link>
 
                     {/* Network Log */}
                     <div>
